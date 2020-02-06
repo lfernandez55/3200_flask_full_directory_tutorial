@@ -7,7 +7,7 @@ from flask import Blueprint, redirect, render_template
 from flask import request, url_for
 
 
-from app import db
+#from app import db
 
 book_blueprint = Blueprint('books', __name__, template_folder='templates')
 

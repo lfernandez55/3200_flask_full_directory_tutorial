@@ -9,7 +9,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 # this is defined globally - so a little differently than how we used to do it
 # see how it's connected to the flask app below
-db = SQLAlchemy()
+#db = SQLAlchemy()
 
 # Initialize Flask Application
 def create_app(extra_config_settings={}):
@@ -25,7 +25,7 @@ def create_app(extra_config_settings={}):
 
     # Setup Flask-SQLAlchemy
     # up to now we did: db = SQLAlchemy(app) now we do:
-    db.init_app(app)
+    #db.init_app(app)
 
     # Register blueprints
     from .views import register_blueprints
