@@ -4,11 +4,9 @@
 
 
 from flask import Blueprint, redirect, render_template
-from flask import request, url_for
 
 
-#from app import db
-
+#after defining the book_blueprint you use it as a decorator in your views below
 book_blueprint = Blueprint('books', __name__, template_folder='templates')
 
 
