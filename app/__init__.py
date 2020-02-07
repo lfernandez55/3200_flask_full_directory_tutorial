@@ -27,6 +27,8 @@ def create_app(extra_config_settings={}):
     from .views import register_blueprints
     register_blueprints(app)
 
+    # Setup Flask-User to handle user account related forms
+    #from .forms.book_forms import BookForm
 
     return app
 
