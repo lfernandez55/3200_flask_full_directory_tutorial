@@ -4,8 +4,8 @@
 from .book_views import book_blueprint
 from .main_views import main_blueprint
 
-def register_blueprints(app):
-    app.register_blueprint(book_blueprint)
+
 
 def register_blueprints(app):
     app.register_blueprint(main_blueprint)
+    app.register_blueprint(book_blueprint)
