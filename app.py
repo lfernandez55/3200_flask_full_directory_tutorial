@@ -1,6 +1,3 @@
-# __init__.py is a special Python file that allows a directory to become
-# a Python package so it can be accessed using the 'import' statement.
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
@@ -14,22 +11,20 @@ def create_app(extra_config_settings={}):
     # Instantiate Flask
     app = Flask(__name__)
 
-    # Load common settings
-    app.config.from_object('app.settings')
-    # Load extra settings from extra_config_settings param
-    app.config.update(extra_config_settings)
+    # # Load settings
+    app.config.from_pyfile('settings.py')
 
     # Setup Flask-SQLAlchemy
     # up to now we did: db = SQLAlchemy(app) now we do:
     db.init_app(app)
 
     # Register blueprints
-    from .views import register_blueprints
+    from views import register_blueprints
     register_blueprints(app)
-
-    # Setup Flask-User to handle user account related forms
-    #from .forms.book_forms import BookForm
 
     return app
 
-
+# Start development web server
+if __name__ == '__main__':
+    app = create_app()
+    app.run(host='0.0.0.0', port=7000, debug=True)

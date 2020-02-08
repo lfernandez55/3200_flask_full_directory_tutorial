@@ -1,5 +1,12 @@
-# 3200_flask_full_directory_tutorial
+This repo contains a skeleton flask app where templates, views, models and forms are all distributed into their own
+folders.  It is running some very minimum wtforms and sqlalchemy models and queries that verify all those
+ libraries are working.
 
-Resources: https://flask.palletsprojects.com/en/1.1.x/patterns/packages/
+To run/deploy it:
 
-https://flask.palletsprojects.com/en/1.1.x/blueprints/#blueprints
+venv\scripts\activate.bat
+
+pip install -r requirements.txt
+
+flask run
+

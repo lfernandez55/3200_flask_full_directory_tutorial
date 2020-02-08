@@ -7,3 +7,5 @@ class Book(db.Model):
     title = db.Column(db.String(100), nullable=False, server_default=u'', unique=False)
 
 
+
+
